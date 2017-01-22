@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  become_method: sudo
+  tasks:
+  - name: update the machine
+    apt:
+      update_cache: yes
+
+  - name: upgrade the machine
+    apt:
+      upgrade: full
+
+  - name: include hosts-tasks
+    include: ../hosts-tasks.yml
+...

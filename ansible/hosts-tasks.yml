@@ -1,0 +1,8 @@
+---
+- name: add host
+  lineinfile: dest=/etc/hosts line="192.168.233.151 node1.local.dev" state=present
+- name: add host
+  lineinfile: dest=/etc/hosts line="192.168.233.152 node2.local.dev" state=present
+- name: add host
+  lineinfile: dest=/etc/hosts line="192.168.233.153 node3.local.dev" state=present
+...
